@@ -23,13 +23,13 @@ const navigation = [
   {
     title: 'Dashboard',
     url: '/dashboard',
-    icon: LayoutDashboard,}
-  // },
-  // {
-  //   title: 'Landing Page',
-  //   url: '/dashboard/landing',
-  //   icon: LayoutDashboard
-  // }
+    icon: LayoutDashboard,
+  },
+  {
+    title: 'Landing Page',
+    url: '/dashboard/landing',
+    icon: LayoutDashboard
+  }
   // },
   // {
   //   title: 'Events',

@@ -15,6 +15,7 @@ import { EventsList } from "./pages/EventsList";
 import { NewEvent } from "./pages/NewEvent";
 import { EditEvent } from "./pages/EditEvent";
 import { Settings } from "./pages/Settings";
+import LandingPage from "./pages/LandingPage";
 import { AdminLayout } from "./components/layout/AdminLayout";
 import NotFound from "./pages/NotFound";
 
@@ -41,6 +42,7 @@ const AppRoutes = () => {
         <Route path="events" element={<EventsList />} />
         <Route path="events/new" element={<NewEvent />} />
         <Route path="events/:id/edit" element={<EditEvent />} />
+        <Route path="landing" element={<LandingPage />} />
         <Route path="settings" element={<Settings />} />
       </Route>
 
