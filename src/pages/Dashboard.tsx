@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Users, MapPin, TrendingUp } from 'lucide-react';
 import { useEvents } from '@/hooks/useEvents';
+import NewRequests from '@/components/requests/NewRequests';
 
 export const Dashboard: React.FC = () => {
   const { events, loading } = useEvents();
@@ -79,41 +80,9 @@ export const Dashboard: React.FC = () => {
       {/* Recent Events */}
       <Card className="shadow-card">
         <CardHeader>
-          <CardTitle>Recent Events</CardTitle>
-          <CardDescription>Latest events in your system</CardDescription>
+          <CardTitle>Port:80 Requests</CardTitle>
         </CardHeader>
-        <CardContent>
-          {events.length === 0 ? (
-            <div className="text-center py-8 text-muted-foreground">
-              <Calendar className="h-12 w-12 mx-auto mb-4 opacity-50" />
-              <p>No events found. Create your first event to get started!</p>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {events.slice(0, 5).map((event, index) => (
-                <div 
-                  key={event.id} 
-                  className="flex items-center space-x-4 p-4 border rounded-lg hover:bg-muted/50 transition-colors duration-200 animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Calendar className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="flex-1 space-y-1">
-                    <h4 className="font-medium">{event.name}</h4>
-                    <p className="text-sm text-muted-foreground">
-                      {new Date(event.date).toLocaleDateString()} • {event.location}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm font-medium">{event.speakerName}</p>
-                    <p className="text-xs text-muted-foreground">{event.company}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </CardContent>
+        <NewRequests />
       </Card>
     </div>
   );
