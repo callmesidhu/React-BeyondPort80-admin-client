@@ -23,18 +23,24 @@ const navigation = [
   {
     title: 'Dashboard',
     url: '/dashboard',
-    icon: LayoutDashboard,
-  },
-  {
-    title: 'Events',
-    url: '/dashboard/events',
-    icon: Calendar,
-  },
-  {
-    title: 'Add Event',
-    url: '/dashboard/events/new',
-    icon: Plus,
-  },
+    icon: LayoutDashboard,}
+  // },
+  // {
+  //   title: 'Landing Page',
+  //   url: '/dashboard/landing',
+  //   icon: LayoutDashboard
+  // }
+  // },
+  // {
+  //   title: 'Events',
+  //   url: '/dashboard/events',
+  //   icon: Calendar,
+  // },
+  // {
+  //   title: 'Add Event',
+  //   url: '/dashboard/events/new',
+  //   icon: Plus,
+  // },
   // {
   //   title: 'Landing',
   //   url: '/dashboard/landing',
